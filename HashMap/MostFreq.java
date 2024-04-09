@@ -3,8 +3,8 @@ package HashMap;
 import java.util.*;
 
 public class MostFreq {
-    static void findMostFreq(int[]arr){
-        
+    static void findMostFreq(int[] arr) {
+
         Map<Integer, Integer> freq = new HashMap<>();
         for (int el : arr) {
             if (!freq.containsKey(el)) {
@@ -26,17 +26,18 @@ public class MostFreq {
 
         // 2nd way of iterating
 
-        // for(var key:freq.keySet()){
-        // if(freq.get(key)>mxFreq){
-        // mxFreq = freq.get(key);
-        // ansKey = key;
-        // }
+        // for (var key : freq.keySet()) {
+        //     if (freq.get(key) > mxFreq) {
+        //         mxFreq = freq.get(key);
+        //         ansKey = key;
+        //     }
         // }
 
-        System.out.println(ansKey);
+        // System.out.println(ansKey);
         System.out.printf("%d has maximum freq & it occurs %d times ", ansKey, mxFreq);
 
     }
+
     public static void main(String[] args) {
 
         // FIND MOST FREQ ELEM
