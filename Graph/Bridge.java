@@ -2,7 +2,7 @@ package Graph;
 
 import java.util.ArrayList;
 
-public class ArticulationPnt {
+public class Bridge {
     static class edge {
         int src;
         int dest;
@@ -32,59 +32,60 @@ public class ArticulationPnt {
         // graph[3].add(new edge(3, 5));
 
         graph[4].add(new edge(4, 3));
+        // graph[4].add(new edge(4, 5));
+
+        // graph[5].add(new edge(5, 3));
+        // graph[5].add(new edge(5, 4));
 
     }
 
-    public static void dfs(ArrayList<edge> graph[], int curr, int par,
-boolean vis[], int dt[], int low[], int time,
-            boolean isArticulation[]) {
-        vis[curr] = true;
+    public static void dfs(ArrayList<edge>[] graph, int curr, boolean[] isVisited, int[] dt, int[] low, int time,
+            int par) {
+
+        isVisited[curr] = true;
+
         dt[curr] = low[curr] = ++time;
-        int child = 0;
         for (int i = 0; i < graph[curr].size(); i++) {
             edge e = graph[curr].get(i);
+
             if (e.dest == par)
                 continue;
-            if (vis[e.dest]) {
-                low[curr] = Math.min(low[curr], dt[e.dest]);
-            } else {
-                dfs(graph, e.dest, curr, vis, dt, low, time, isArticulation);
+            else if (!isVisited[e.dest]) {
+                dfs(graph, e.dest, isVisited, dt, low, time, curr);
                 low[curr] = Math.min(low[curr], low[e.dest]);
-                if (dt[curr] <= low[e.dest] && par != -1) {
-                    isArticulation[curr] = true;
+
+                if (dt[curr] < low[e.dest]) {
+                    System.out.println("Bridge is:- " + curr + "---" + e.dest);
+                    // System.out.println(curr + e.dest);
                 }
-                child++;
+
+            } else {
+                low[curr] = Math.min(low[curr], dt[e.dest]);
+
             }
         }
-        // Articulation point condition
-        if (par == -1 && child > 1) {
-            isArticulation[curr] = true;
-        }
+
     }
 
-    public static void getArticulation(ArrayList<edge> graph[], int V) {
-        int dt[] = new int[V];
-        int low[] = new int[V];
-        int time = 0;
-        boolean vis[] = new boolean[V];
-        boolean isArticulation[] = new boolean[V];
-        for (int i = 0; i < V; i++) {
-            if (!vis[i]) {
-                dfs(graph, i, -1, vis, dt, low, time, isArticulation);
-            }
-        }
-        for (int i = 0; i < V; i++) {
-            if (isArticulation[i])
-                System.out.println(i);
+    public static void bridge(ArrayList<edge>[] graph, int v) {
+        int[] dt = new int[v];
+        int[] low = new int[v];
 
+        int time = 0;
+        boolean[] isVisited = new boolean[v];
+
+        for (int i = 0; i < v; i++) {
+            if (!isVisited[i]) {
+                dfs(graph, i, isVisited, dt, low, time, -1);
+            }
         }
     }
 
     public static void main(String[] args) {
-        int v = 5;
+        int v = 6;
         ArrayList<edge>[] graph = new ArrayList[v];
         createGraph(graph);
-        getArticulation(graph, v);
+        bridge(graph, v);
 
     }
 }

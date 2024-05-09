@@ -52,6 +52,7 @@ public class usniqSubStr {
 
 
             String suffix = str.substring(i);
+            System.out.println("ALl Suffix"+ suffix);
            insert(suffix);
 
 

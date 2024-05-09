@@ -2,7 +2,7 @@ package Graph;
 
 import java.util.ArrayList;
 
-public class CycleDetectTion {
+public class CycleDirectedGP {
     static class edge {
         int src;
         int dest;
@@ -19,58 +19,50 @@ public class CycleDetectTion {
             graph[i] = new ArrayList<>();
         }
 
-        graph[0].add(new edge(0, 2));
+        graph[0].add(new edge(0, 1));
+        graph[0].add(new edge(0, 4));
 
         graph[1].add(new edge(1, 0));
-        graph[2].add(new edge(2, 3));
-        // graph[3].add(new edge(3, 0));
+        graph[1].add(new edge(1, 2));
+        // graph[1].add(new edge(1, 4));// False condition
 
+        graph[2].add(new edge(2, 3));
+        graph[2].add(new edge(2, 1));
+
+        graph[3].add(new edge(3, 2));
+
+        graph[4].add(new edge(4, 0));
+        // graph[4].add(new edge(4, 1));  // False condition
+        graph[4].add(new edge(4, 5));
+
+        graph[5].add(new edge(5, 4));
+       
     }
 
-    public static boolean detectCycle(ArrayList<edge>[] graph, int curr, boolean[] isVisited, boolean[] rec) {
+    public static boolean isCycle(ArrayList<edge>[] graph, int curr, int par, boolean[] isVisited) {
         isVisited[curr] = true;
-        rec[curr] = true;
 
         for (int i = 0; i < graph[curr].size(); i++) {
             edge e = graph[curr].get(i);
-
-            if (rec[e.dest]) {
+            if (isVisited[e.dest] && e.dest != par)
                 return true;
-            }
 
             else if (!isVisited[e.dest]) {
-                if (detectCycle(graph, e.dest, isVisited, rec)) {
+                if (isCycle(graph, e.dest, curr, isVisited))
                     return true;
-                }
             }
-
         }
-        rec[curr] = false;
+
         return false;
 
     }
 
     public static void main(String[] args) {
-        int v = 4;
+        int v = 6;
         ArrayList<edge>[] graph = new ArrayList[v];
         createGraph(graph);
         boolean[] isVisited = new boolean[v];
-        boolean[] rec = new boolean[v];
-
-        // for multiplee sub graph
-
-        for (int i = 0; i < v; i++) {
-            if (!isVisited[i]) {
-                boolean isCycle = detectCycle(graph, 0, isVisited, rec);
-
-                if (isCycle) {
-                    System.out.println(isCycle);
-                    break;
-                }
-
-            }
-        }
-        System.out.println(detectCycle(graph, 0, isVisited, rec));
+        System.out.println(isCycle(graph, 0, -1, isVisited));
 
     }
 }

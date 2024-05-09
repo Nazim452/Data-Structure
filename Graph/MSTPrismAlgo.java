@@ -1,105 +1,96 @@
-// package Graph;
+package Graph;
 
-// import java.util.ArrayList;
-// import java.util.PriorityQueue;
-
-
-
-
-
-// // // Error_______________________________________________________________________________
+import java.util.ArrayList;
+import java.util.PriorityQueue;
 
 
 
 
 
+public class MSTPrismAlgo {
 
+    static class edge {
+        int src;
+        int dest;
+        int wt;
 
+        public edge(int src, int dest, int wt) {
+            this.src = src;
+            this.dest = dest;
+            this.wt = wt;
 
+        }
+    }
 
-// public class MSTPrismAlgo {
+    public static void createGraph(ArrayList<edge>[] graph) {
+        for (int i = 0; i < graph.length; i++) {
+            graph[i] = new ArrayList<>();
+        }
 
-//     static class edge {
-//         int src;
-//         int dest;
-//         int wt;
+        graph[0].add(new edge(0, 1, 10));
+        graph[0].add(new edge(0, 2, 15));
+        graph[0].add(new edge(0, 3, 30));
 
-//         public edge(int src, int dest, int wt) {
-//             this.src = src;
-//             this.dest = dest;
-//             this.wt = wt;
+        graph[1].add(new edge(1, 0, 10));
+        graph[1].add(new edge(1, 3, 40));
 
-//         }
-//     }
+        graph[2].add(new edge(2, 0, 15));
+        graph[2].add(new edge(2, 3, 50));
 
-//     public static void createGraph(ArrayList<edge>[] graph) {
-//         for (int i = 0; i < graph.length; i++) {
-//             graph[i] = new ArrayList<>();
-//         }
+        graph[3].add(new edge(3, 1, 40));
+        graph[3].add(new edge(3, 2, 50));
 
-//         graph[0].add(new edge(0, 1, 10));
-//         graph[0].add(new edge(0, 2, 15));
-//         graph[0].add(new edge(0, 3, 30));
+    }
 
-//         graph[1].add(new edge(1, 0, 10));
-//         graph[1].add(new edge(1, 3, 0));
+    public static class pair implements Comparable<pair> {
+        int node;
+        int cost;
 
-//         graph[2].add(new edge(2, 0, 15));
-//         graph[2].add(new edge(2, 3, 50));
+        public pair(int node, int cost) {
+            this.node = node;
+            this.cost = cost;
+        }
 
-//         graph[3].add(new edge(3, 1, 40));
-//         graph[3].add(new edge(3, 2, 50));
+        @Override
 
-//     }
+        public int compareTo(pair p2) {
+            return this.cost - p2.cost;
+        }
 
-//     public class pair implements Comparable<pair> {
-//         int node;
-//         int cost;
+        public static void primsAlgo(ArrayList<edge>[] graph, int V) {
+            PriorityQueue<pair> pq = new PriorityQueue<>(); // NON -MST
+            boolean[] isVisited = new boolean[V]; // MST
 
-//         public pair(int node, int cost) {
-//             this.node = node;
-//             this.cost = cost;
-//         }
+            pq.add(new pair(0, 0));
 
-//         @Override
+            int cost = 0;
 
-//         public int compareTo(pair p2) {
-//             return this.cost - p2.cost;
-//         }
+            while (!pq.isEmpty()) {
+                pair curr = pq.remove();
 
-//         public static void primsAlgo(ArrayList<edge>[] graph, int V) {
-//             PriorityQueue<pair> pq = new PriorityQueue<>(); // NON -MST
-//             boolean[] isVisited = new boolean[V]; // MST
+                if (!isVisited[curr.node]) {
+                    isVisited[curr.node] = true;
+                    cost += curr.cost;
 
-//             pq.add(new pair(0, 0));
+                    for (int i = 0; i < graph[curr.node].size(); i++) {
+                        edge e = graph[curr.node].get(i);
 
-//             int cost = 0;
-
-//             while (!pq.isEmpty()) {
-//                 pair curr = pq.remove();
-
-//                 if (!isVisited[curr.node]) {
-//                     isVisited[curr.node] = true;
-//                     cost += curr.cost;
-
-//                     for (int i = 0; i < graph[curr.node].size(); i++) {
-//                         edge e = graph[curr.node].get(i);
-
-//                         if (!isVisited[e.dest]) {
-//                             pq.add(new pair(e.dest, e.wt));
-//                         }
-//                     }
-//                 }
-//             }
-//             System.out.println("MIN Cost" + cost);
+                        if (!isVisited[e.dest]) {
+                            pq.add(new pair(e.dest, e.wt));
+                        }
+                    }
+                }
+            }
+            System.out.println("MIN Cost" + cost);
     
-//         }
+        }
 
-//         public static void main(String[] args) {
-//             int V = 4;
-//             ArrayList<edge>[] graph = new ArrayList[V];
-//             createGraph(graph);
+        public static void main(String[] args) {
+            int V = 4;
+            ArrayList<edge>[] graph = new ArrayList[V];
+            createGraph(graph);
+            primsAlgo(graph, V);
 
-//         }
-//     }
-// }
+        }
+    }
+}

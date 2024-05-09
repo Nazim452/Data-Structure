@@ -10,7 +10,8 @@ public class MaxBalancedSubStr {
             if(s.charAt(i)=='L') l++;
             else r++;
 
-            if(l==r){
+            if(
+                l==r){
                 ans++;
                 l=r=0;
             }
@@ -20,7 +21,9 @@ public class MaxBalancedSubStr {
 
     }
     public static void main(String[] args) {
-        String s = "LLLRRRRRLLRLLR";
+        // String s = "LRLRRLRL";  //3
+        String s = "LRRRRLLRLLRL";
+        // String s = "LLLRRRRRLLRLLR";//4
         maxBal(s);
         
     }

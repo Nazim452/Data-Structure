@@ -51,7 +51,7 @@ public class Dijkstra {
         @Override
 
         public int compareTo(pair p2) {
-            return this.dist - p2.dist; // comnaprison based on distanxce
+            return this.dist - p2.dist; // comnapriso based on distancein in our priority queue
         }
 
     }
@@ -82,6 +82,8 @@ public class Dijkstra {
 
                     if (dist[u] + e.wt < dist[v])
                         dist[v] = dist[u] + e.wt; // realxation
+
+                     pq.add(new pair(v, dist[v]));   
                 }
 
             }
@@ -97,7 +99,7 @@ public class Dijkstra {
         int v = 6;
         ArrayList<edge>[] graph = new ArrayList[v];
         createGraph(graph);
-        dijkstra(graph, v, v);
+        dijkstra(graph, 0, v);
 
     }
 }

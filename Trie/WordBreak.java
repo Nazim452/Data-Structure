@@ -28,7 +28,7 @@ public class WordBreak {
 
         for (int i = 1; i <= key.length(); i++) {
             String firstcheck = key.substring(0, i);
-            String secCheck = key.substring(i);
+            String secCheck = key.substring(i);// i to n string
 
             if (search(firstcheck) && wordBreak(secCheck))
                 return true;
@@ -76,7 +76,7 @@ public class WordBreak {
     public static void main(String[] args) {
         
         String[]word ={"i","like","sam","samsang","mobile"};
-        String key = "  ilikesamsung";
+        String key = "ilikesam";
         for(int i  =0; i < word.length; i++){
             insert(word[i]);
         }

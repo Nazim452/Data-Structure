@@ -61,7 +61,7 @@ public class Searching {
         for(int i  =0; i < word.length; i++){
             insert(word[i]);
         }
-          System.out.println(search("therea"));
+          System.out.println(search("there"));
 
     }
 }

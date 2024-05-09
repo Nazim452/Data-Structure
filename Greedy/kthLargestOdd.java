@@ -12,7 +12,7 @@ public class kthLargestOdd {
     }
     public static void main(String[] args) {
 
-        kthlarODDD(-10, 25, 7);//13;
+        kthlarODDD(-3, 3, 1);//3;
         
     }
 }

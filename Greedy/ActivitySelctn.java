@@ -25,7 +25,7 @@ public class ActivitySelctn {
         System.out.println("Maximum Activity: - " + maxActivity);
 
         for (int i = 0; i < ans.size(); i++) {
-            System.out.print(ans.get(i) + " ");
+            System.out.print("A"+ans.get(i) + " ");
         }
     }
 
@@ -41,10 +41,10 @@ public class ActivitySelctn {
             activites[i][2]=end[i];
         }
 
-        //sorting of second column
+        //sorting of second column-lambda function
         Arrays.sort(activites, Comparator.comparingDouble(o->o[2]));
 
-        int maxActivity = 0;
+        int maxActivity = 1;
         ArrayList<Integer> ans = new ArrayList<>();
         ans.add(activites[0][0]);
         int lastend = activites[0][2];
@@ -59,7 +59,7 @@ public class ActivitySelctn {
         System.out.println("Maximum Activity: - " + maxActivity);
 
         for (int i = 0; i < ans.size(); i++) {
-            System.out.print(ans.get(i) + " ");
+            System.out.print("A"+ans.get(i) + " ");
         }
 
 
@@ -71,6 +71,8 @@ public class ActivitySelctn {
     public static void main(String[] args) {
         // int[] st = { 1, 3, 0, 5, 8, 5 };
         // int[] end = { 2, 4, 6, 7, 9, 9 };
+        // int[] st = { 10,12,20 };
+        // int[] end = { 20,25,30};
         // actvity(st, end);   //0 1 3 4
 
 
@@ -78,6 +80,7 @@ public class ActivitySelctn {
 
         int[]st = {0,1,3,5,5,8};
         int[]end ={6,2,4,7,9,9};
-        actvityEndTimeNotSor(st, end);
+        
+             actvityEndTimeNotSor(st, end);
     }
 }

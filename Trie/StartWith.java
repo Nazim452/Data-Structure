@@ -62,7 +62,7 @@ public class StartWith {
     public static void main(String[] args) {
         
         String[]word = {"apple","app","mango","man"};
-        String prefix = "app";
+        String prefix = "mano";
         for(int i  =0; i < word.length; i++){
             insert(word[i]);
         }

@@ -2,6 +2,8 @@ package ArrayList;
 
 import java.util.ArrayList;
 
+import LinkedList.CutomLinkedList.node;
+
 public class BeautifulArrLst {
 
     static  ArrayList<Integer> btfl(int n){
@@ -35,9 +37,16 @@ public class BeautifulArrLst {
 
     }
      public static void main(String[] args) {
-        System.out.println(btfl(5));
+        // System.out.println(btfl(5));
+        int n = 10;
 
-       
-        
+        for(int i = 1; i<=10; i++){
+            int res = n+i;
+            System.out.println(n +"X"+ i +"="+ res);     
+     }
+
+   
+
+
      }
 }
