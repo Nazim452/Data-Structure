@@ -2,23 +2,14 @@ package Stack;
 
 import java.util.Stack;
 
+
+// Not wroking for all the test cases______________________
+
+
+
+
+
 public class Infix {
-
-    static void operation(Stack<Integer> val, Stack<Character> opr) {
-        int val2 = val.pop();
-        int val1 = val.pop();
-
-        if (opr.peek() == '+')
-            val.push(val1 + val2);
-        if (opr.peek() == '-')
-            val.push(val1 - val2);
-        if (opr.peek() == '*')
-            val.push(val1 * val2);
-        if (opr.peek() == '/')
-            val.push(val1 / val2);
-        opr.pop();
-
-    }
 
     static int calculateInfix(String str) {
 
@@ -27,7 +18,6 @@ public class Infix {
 
         for (int i = 0; i < str.length(); i++) {
             char ch = str.charAt(i);
-            if(ch==' ') continue;
 
             int ascii = (int) ch; // ch = 5
             if (ascii >= 48 && ascii <= 57) { // asci= 53
@@ -41,19 +31,50 @@ public class Infix {
             else if (ch == ')') {
 
                 while (opr.peek() != '(') {
-                   operation(val, opr);
+                    int val2 = val.pop();
+                    int val1 = val.pop();
+
+                    if (opr.peek() == '+')
+                        val.push(val1 + val2);
+                    if (opr.peek() == '-')
+                        val.push(val1 - val2);
+                    if (opr.peek() == '*')
+                        val.push(val1 * val2);
+                    if (opr.peek() == '/')
+                        val.push(val1 / val2);
+                    opr.pop();
 
                 }
                 opr.pop(); // '(' - remove
             } else {
                 if (ch == '+' || ch == '-') {
-                    operation(val, opr);
+                    int val2 = val.pop();
+                    int val1 = val.pop();
+
+                    if (opr.peek() == '+')
+                        val.push(val1 + val2);
+                    if (opr.peek() == '-')
+                        val.push(val1 - val2);
+                    if (opr.peek() == '*')
+                        val.push(val1 * val2);
+                    if (opr.peek() == '/')
+                        val.push(val1 / val2);
+                    opr.pop();
                     opr.push(ch);
 
                 }
                 if (ch == '*' || ch == '/') {
                     if (opr.peek() == '*' || opr.peek() == '/') {
-                        operation(val, opr);
+                        int val2 = val.pop();
+                        int val1 = val.pop();
+
+                        // if(opr.peek()=='+') val.push(val2+val1);
+                        // if(opr.peek()=='-') val.push(val2-val1);
+                        if (opr.peek() == '*')
+                            val.push(val1 * val2);
+                        if (opr.peek() == '/')
+                            val.push(val1 / val2);
+                        opr.pop();
                         opr.push(ch);
 
                     } else
@@ -63,11 +84,18 @@ public class Infix {
             }
 
         }
-
-
-        
         while (val.size() > 1) {
-            operation(val, opr);
+            int val2 = val.pop();
+            int val1 = val.pop();
+            if (opr.peek() == '+')
+                val.push(val1 + val2);
+            if (opr.peek() == '-')
+                val.push(val1 - val2);
+            if (opr.peek() == '*')
+                val.push(val1 * val2);
+            if (opr.peek() == '/')
+                val.push(val1 / val2);
+            opr.pop();
 
         }
         return val.peek();
@@ -75,11 +103,8 @@ public class Infix {
     }
 
     public static void main(String[] args) {
-        // String str = "9-(5+3)*(4/6)";
-        String str = "1 + 1";
-
-
-        // String str = "6-(3+4)*(5/3)";
+        String str = "5-4+3";
+        // String str = "6-3+4*(5/3)-(8+9)";
         System.out.println(calculateInfix(str));
         ;
 

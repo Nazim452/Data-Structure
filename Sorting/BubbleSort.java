@@ -33,9 +33,37 @@ public class BubbleSort {
         }
     }
 
+    static void bubbleSortRecursive(int[] arr, int n) {
+        // Base case: If the array size is 1, it's already sorted
+        if (n == 1) {
+            return;
+        }
+
+        // One pass of bubble sort. After this pass, the largest element is moved to the end.
+        boolean flag = false;
+        for (int j = 0; j < n - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                // Swap arr[j] and arr[j+1]
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+                flag = true;
+            }
+        }
+
+        // If no two elements were swapped by inner loop, then array is already sorted
+        if (!flag) {
+            return;
+        }
+
+        // Largest element is fixed, recur for remaining array
+        bubbleSortRecursive(arr, n - 1);
+    }
+
+
     public static void main(String[] args) {
          int[]arr = { 45, 3,24,89,5};
-         bubblleSort(arr);
+         bubbleSortRecursive(arr,arr.length);   
          printArray(arr);
 
         

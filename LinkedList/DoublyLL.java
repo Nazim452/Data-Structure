@@ -143,9 +143,9 @@ public class DoublyLL {
         // insertAtHead(a, 90);
         // display(d);
         // insertAtIndex(a, 4,89);
-        // deleteAtIndex(a, 4);
+        deleteAtIndex(a, 2);
         // insertAtTail(a, 15);
-        // display(d);
+        display(d);
 
     }
 

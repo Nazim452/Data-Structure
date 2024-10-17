@@ -36,8 +36,8 @@ public class Sqrt {
         return -1;
     }
     public static void main(String[] args) {
-        // System.out.println(sqrt(4));
-        System.out.println(LinearSqrt(29));
+        System.out.println(sqrt(4));
+        // System.out.println(LinearSqrt(29));
 
     }
 
