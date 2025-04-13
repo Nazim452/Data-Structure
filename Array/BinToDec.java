@@ -18,8 +18,8 @@ public class BinToDec {
     static void dectoBin(int n) {
         int pow = 0, bin = 0;
         while (n > 0) {
-            int lastdigit = n % 2;
-            bin += lastdigit * (int) Math.pow(10, pow);
+            int remainder = n % 2;
+            bin += remainder * (int) Math.pow(10, pow);
             pow++;
             n = n / 2;
 
@@ -28,7 +28,7 @@ public class BinToDec {
     }
    public static void main(String[] args) {
     // binTOdec(1001);
-    dectoBin(9);
+    dectoBin(10);
     
    } 
 }

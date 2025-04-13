@@ -13,9 +13,9 @@ public class Basic {
 
         //1.  Iterate over the key______________________
 
-        // for(var i:map.keySet()){
-        //     System.out.print(i+" ");
-        // }
+        for(var i:map.keySet()){
+            System.out.print(i+" ");
+        }
 
         // 2. Iterate over the Value___________________
 

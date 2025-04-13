@@ -9,9 +9,7 @@ public class Fibonaaci {
         return f[n];
 
     } 
-    
-    
-    // Fibonaaci - Tabulation.....
+     // Fibonaaci - Tabulation.....
 
     static  int fibTabulation(int n){
         int[]dp = new int[n+1];
@@ -32,6 +30,7 @@ public class Fibonaaci {
         // int[]f = new int[n+1];
         // System.out.println(fib(n, f));  
 
+ 
         // Print all the number
         // for (int i = 0; i <= n; i++) {
         //     System.out.print(fib(i, f) + " ");
@@ -39,6 +38,6 @@ public class Fibonaaci {
         
         
 
-        System.out.println(fibTabulation(n));
+        // System.out.println(fibTabulation(n));
     }
 }
