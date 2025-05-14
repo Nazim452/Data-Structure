@@ -2,6 +2,16 @@ package Array2D;
 
 public class PasCal {
 
+
+// 1 
+// 1 1 
+// 1 2 1 
+// 1 3 3 1
+// 1 4 6 4 1
+// 1 5 10 10 5 1
+// 1 6 15 20 15 6 1
+
+
     static void printMatrix(int[][] matrix) {
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {

@@ -13,6 +13,7 @@ public class hcfLCM {
 
         return gcd;
     }
+    // O(min(x,y))
 
     static int lcm(int x, int y) {
 
@@ -29,11 +30,20 @@ public class hcfLCM {
         return lcm;
 
     }
-
+    
+    
+    
+    static int gcdEuclidean(int x, int y) {
+        return y == 0 ? x : gcd(y, x % y);
+    }
+    
+    static int lcmOptimized(int x, int y) {
+        return (x * y) / gcd(x, y); // O(log(min(x, y)))
+    }
     public static void main(String[] args) {
 
         // System.out.println(gcd(14, 8));
-        // System.out.println(lcm(14, 8));
+        System.out.println(lcm(14, 8));
 
         Long num1 = 10L;
         Long num2 = -10L;

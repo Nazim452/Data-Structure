@@ -11,7 +11,7 @@ public class Prefix {
         pref[0] = arr[0];
 
         for(int i = 1; i<arr.length; i++){
-            pref[i] =    + arr[i];
+            pref[i] =+ arr[i];
         }
         return pref;
     }

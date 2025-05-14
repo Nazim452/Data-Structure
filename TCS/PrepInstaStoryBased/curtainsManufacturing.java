@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 // Input :
 
-// bbbaaababa -> Value of str
+// bbbaaababa -> Value of str - Har 1 string me a raehga hi rahge..
 
 // 3    -> Value of L
 

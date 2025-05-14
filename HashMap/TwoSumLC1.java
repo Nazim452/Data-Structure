@@ -13,9 +13,9 @@ public class TwoSumLC1 {
             int partner = tar - arr[i];
 
             if (mp.containsKey(partner)) {
-                ans = new int[] { i, mp.get(partner) };
+                ans = new int[] { mp.get(partner),i  };
             } else {
-                mp.put(arr[i], i);
+                mp.put(arr[i],i);
             }
         }
 
@@ -24,8 +24,8 @@ public class TwoSumLC1 {
     }
 
     public static void main(String[] args) {
-        int[]arr = {2,5,6,2,4};
-        int tar = 6;
+        int[]arr = {2,5,6,2,4};  // {2,4} - index number.
+        int tar = 10;
         int[]ans = twoSum(arr, tar);
         for(Integer i:ans) System.out.print(i+" ");
 

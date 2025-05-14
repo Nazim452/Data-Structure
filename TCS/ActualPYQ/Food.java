@@ -1,10 +1,6 @@
 package TCS.ActualPYQ;
 
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Map;
-import java.util.Scanner;
-import java.util.TreeMap;
+import java.util.*;;
 
 // Input -- 
 //  Total income:Int
@@ -20,55 +16,47 @@ import java.util.TreeMap;
 
 public class Food {
 
-  
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int totalIncome = sc.nextInt();
-  
+
         // Map<String, Integer> map = new TreeMap<>();
         // Map<String, Integer> map = new HashMap<>();
-        Map<String, Integer> map = new LinkedHashMap<>(); //maintain order
+        Map<String, Integer> map = new LinkedHashMap<>(); // maintain order
         // Map<String, Integer> map1 = new TreeMap<>(); // ascending order
-
-
-
-
-
-
-
-
-        
 
         int totalExpenses = 0;
 
-       
         while (true) {
-           String category = sc.next();
+            String category = sc.next();
             if (category.equals("done")) {
                 break;
             }
 
-           int  expense = sc.nextInt();
-       
+            int expense = sc.nextInt();
 
-           map.put(category, map.getOrDefault(category, 0) + expense);
-           totalExpenses += expense;
+            map.put(category, map.getOrDefault(category, 0) + expense);
+            totalExpenses += expense;
 
         }
-       
-
 
         System.out.println(totalIncome);
         System.out.println(totalExpenses);
-        System.out.println(totalIncome-totalExpenses);
+        System.out.println(totalIncome - totalExpenses);
 
-
-        for( var data:map.entrySet()){
-            System.out.println(data.getKey()+" : "+data.getValue());
+        for (var data : map.entrySet()) {
+            System.out.println(data.getKey() + " : " + data.getValue());
 
         }
 
-      
+        // 1200
+        // food
+        // 100
+        // education
+        // 300
+        // travel
+        // 400
+        // done
 
     }
 

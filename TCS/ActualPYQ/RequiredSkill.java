@@ -1,7 +1,7 @@
 package TCS.ActualPYQ;
 
 import java.util.*;
-
+ 
 // Problem Statement: Minimum Team Selection for Required Skills
 // You are given a set of required skills and a number of candidates, where each candidate
 // possesses certain skills. Your task is to form a team with the minimum number of people that
@@ -28,89 +28,95 @@ import java.util.*;
 // Candidate 3: {c}
 // The minimum team is [0, 2] because:
 // Candidate 0 covers {a, b}.
-// Candidate 2 covers {c, d},Together, they cover {a, b, c, d} with the fewest people
+// Candidate 2 covers {c, d},Together, they cover {a, b, c, d} with the fewest people.
 
+//   _________________Test Caess_________________________
+
+//  Test case 1- a b c d , 4 , a b , c , c d , c  ________  Output -  0 2
+//  Test case 2- x y z , 3 , x , y , z  ________  Output -  0 1 2
+//  Test case 2- p q r , 3 , p q r , p , q  ________  Output -  0 1 2
+//  Test case 2- m n , 4 , m n , m , n , m n ________  Output -  0 
+//  Test case 2- 1 2 3 4 5 , 5 , 1 2 , 3 4 , 5 , 1 3 , 2 4 5 ________  Output - 3,4 
 
 public class RequiredSkill {
-    static List<Integer> bestTeam;
-    static Map<String, Integer> SkillIndex = new HashMap<>();
-    private static List<Integer> findMinimumTeam(Set<String> required, List<Set<String>> candidates) {
-        List<Integer> currentTeam = new ArrayList<>();
+
+    private static List<Integer> findMinimumTeam(Set<String> requiredSkills, List<Set<String>> candidates) {
         List<Integer> bestTeam = new ArrayList<>();
-        Set<String> covered = new HashSet<>();
-        
-        backtrack(0, required, candidates, covered, currentTeam, bestTeam);
+        backtrack(0, requiredSkills, candidates, new ArrayList<>(), bestTeam, new HashSet<>());
         return bestTeam;
     }
-    
-    private static void backtrack(int start, Set<String> required, List<Set<String>> candidates, 
-                                Set<String> covered, List<Integer> currentTeam, List<Integer> bestTeam) {
-        // Check if we've covered all required skills
-        if (covered.containsAll(required)) {
+
+    private static void backtrack(int start, Set<String> requiredSkills, List<Set<String>> candidates,
+            List<Integer> currentTeam, List<Integer> bestTeam, Set<String> coveredSkills) {
+        if (coveredSkills.containsAll(requiredSkills)) {
             if (bestTeam.isEmpty() || currentTeam.size() < bestTeam.size()) {
                 bestTeam.clear();
                 bestTeam.addAll(currentTeam);
             }
             return;
         }
-        
-        // Prune if current team is already larger than the best found so far
+
         if (!bestTeam.isEmpty() && currentTeam.size() >= bestTeam.size()) {
             return;
         }
-        
-        // Try adding each candidate starting from 'start'
+
         for (int i = start; i < candidates.size(); i++) {
             Set<String> newSkills = new HashSet<>(candidates.get(i));
-            newSkills.removeAll(covered);
-            
-            // Only proceed if this candidate adds new skills
+            newSkills.removeAll(coveredSkills);
+            newSkills.retainAll(requiredSkills);
+
             if (!newSkills.isEmpty()) {
-                covered.addAll(candidates.get(i));
                 currentTeam.add(i);
-                
-                // Recursively try adding more candidates
-                backtrack(i + 1, required, candidates, covered, currentTeam, bestTeam);
-                
-                // Backtrack
+                coveredSkills.addAll(candidates.get(i));
+
+                backtrack(i + 1, requiredSkills, candidates, currentTeam, bestTeam, coveredSkills);
+
                 currentTeam.remove(currentTeam.size() - 1);
-                covered.removeAll(candidates.get(i));
+                coveredSkills.removeAll(candidates.get(i));
             }
         }
     }
-
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        String input = scanner.nextLine();
-        
-        // Parse the input
-        String[] parts = input.split(" , ");
-        String[] requiredSkills = parts[0].split(" ");
-        int numCandidates = Integer.parseInt(parts[1]);
-        String[] candidatesSkills = parts[2].split(" , ");
-        
-        // Convert required skills to a set
-        Set<String> required = new HashSet<>(Arrays.asList(requiredSkills));
-        
-        // Convert each candidate's skills to a set
-        List<Set<String>> candidates = new ArrayList<>();
-        for (String skills : candidatesSkills) {
-            candidates.add(new HashSet<>(Arrays.asList(skills.split(" "))));
+        String input = scanner.nextLine().trim();
+
+        // Improved input parsing
+        String[] parts = input.split("\\s*,\\s*", 3); // Split on commas with optional whitespace
+        if (parts.length != 3) {
+            System.out.println("Invalid input format");
+            return;
         }
-        
-        // Find the minimum team
-        List<Integer> result = findMinimumTeam(required, candidates);
-        
+
+        Set<String> requiredSkills = new HashSet<>(Arrays.asList(parts[0].split("\\s+")));
+        int numCandidates;
+        try {
+            numCandidates = Integer.parseInt(parts[1].trim());
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid number of candidates");
+            return;
+        }
+
+        List<Set<String>> candidates = new ArrayList<>();
+        String[] candidateSkills = parts[2].split("\\s*,\\s*"); // Split on commas with optional whitespace
+
+        for (String skills : candidateSkills) {
+            candidates.add(new HashSet<>(Arrays.asList(skills.trim().split("\\s+"))));
+        }
+
+        if (candidates.size() != numCandidates) {
+            System.out.println("Number of candidates doesn't match");
+            return;
+        }
+
+        List<Integer> result = findMinimumTeam(requiredSkills, candidates);
+
         // Output the result
-        if (result.isEmpty()) {
-            System.out.println("No solution exists");
-        } else {
-            for (int i = 0; i < result.size(); i++) {
-                if (i > 0) System.out.print(" ");
-                System.out.print(result.get(i));
-            }
-            System.out.println();
+        for (int i = 0; i < result.size(); i++) {
+            if (i > 0)
+                System.out.print(" ");
+            System.out.print(result.get(i));
         }
     }
+
 }

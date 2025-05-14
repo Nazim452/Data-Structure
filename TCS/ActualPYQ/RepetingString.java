@@ -4,13 +4,13 @@ import java.util.*;
 
 // Print - 
 
-// First Non-Repeating Character:
+// --------------First Non-Repeating Character:
 
 // Use a frequency map (LinkedHashMap to maintain order) to track occurrences.
 
 // Identify the first character with frequency 1.
 
-// Most Repeated Character:
+// -------------------Most Repeated Character:
 
 // Track the character with the highest frequency in the map.
 
@@ -37,8 +37,7 @@ public class RepetingString {
         LinkedHashMap<Character, Integer> freqMap = new LinkedHashMap<>();
         char firstRepeating = '\0';
         char firstNonRepeating = '\0';
-        // boolean foundFirstRepeating = false;
-
+      
         // Step 1: Count frequency of each character & identify first repeating
         // character
         for (int i = 0; i < input.length(); i++) {
