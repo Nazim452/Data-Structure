@@ -109,6 +109,7 @@ public class CardGame {
             cards[i] = scanner.nextInt();
         }
         int K = scanner.nextInt();
+        scanner.close();
 
         // Calculate maximum score
         int maxScore = maxScoreFromCards(cards, K);
