@@ -13,7 +13,7 @@ package TCS.ActualPYQ;
 // ✅ Time Complexity: O(2^n)
 
 
-public class SubsetTargetSum3 {
+public class SubsetTargetSumRecusrively {
 
     public static boolean findSubset(int[] nums, int index, int target) {
         if (target == 0)
@@ -24,7 +24,7 @@ public class SubsetTargetSum3 {
         // Include current element
         if (findSubset(nums, index + 1, target - nums[index])) {
             return true;
-        }
+        } 
 
         // Exclude current element
         return findSubset(nums, index + 1, target);

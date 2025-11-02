@@ -11,7 +11,6 @@ public class SetMatrixZero {
         }
     }
 
-
     static void question (int[][] matrix){
          boolean firstRowZero = false;
         boolean firstColZero = false;

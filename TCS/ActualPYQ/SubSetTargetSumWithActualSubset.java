@@ -12,7 +12,7 @@ import java.util.List;
 // Input - {3 5 7 2} , tar = 10
 // O/P Return any one of the set among them either -  {3,7} or {3, 5, 2}
 
-public class SubSetTargetSum {
+public class SubSetTargetSumWithActualSubset {
 
     public static boolean findSubset(int[] nums, int index, int target, List<Integer> current) {
         if (target == 0)

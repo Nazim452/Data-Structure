@@ -1,6 +1,7 @@
 package TCS.Array;
 
 import java.util.HashMap;
+import java.util.Map;
 
 public class MajorityElem {
     static int[] makeFrequency(int[] arr) {
@@ -37,6 +38,8 @@ public class MajorityElem {
         for (int i = 0; i < n; i++) {
             map.put(arr[i], map.getOrDefault(arr[i], 0) + 1);
         }
+        // For Below Java 10 version only this iteration work - 
+        // for (Map.Entry<Integer, Integer> data : map.entrySet()) {
 
         for (var entry : map.entrySet()) {
             if (entry.getValue() > n / 2) {
