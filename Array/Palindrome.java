@@ -11,11 +11,11 @@ public class Palindrome {
 
         }
         if (palindrome == rev)
-            return true;
+             return true;
         return false;
 
     }
     public static void main(String[] args) {
-        System.out.println(isPalindrome(121));
+        System.out.println(isPalindrome( 101));
     }
 }

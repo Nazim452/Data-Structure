@@ -15,7 +15,7 @@ public class BinString {
 
     }
 
-    public static void main(String[] args) {
+     public static void main(String[] args) {
         binaryStirng(3, 0, " ");
 
     }

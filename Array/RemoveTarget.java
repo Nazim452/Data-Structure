@@ -1,6 +1,6 @@
 package Array;
 
-//Not getting Clear Idea_____________________________________________________
+
 
 public class RemoveTarget {
     
@@ -15,6 +15,10 @@ public class RemoveTarget {
             }
         }
         return count;
+
+        // If want to print  (VVIIIIII)
+
+        // Print(arr , i , count) print i to count only
 
     }
     public static void main(String[] args) {

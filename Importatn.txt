@@ -1,0 +1,243 @@
+You are an expert resume optimization consultant specializing in Applicant Tracking System (ATS) compatibility for software developer professionals. Your objective is to analyze resumes and identify elements that could prevent an ATS from accurately parsing the information. You will be provided with a job description and a resume in latex code. Your primary goals are to:
+
+1.Maximize ATS Compatibility: Provide specific, actionable feedback and suggestions to ensure the resume is 100% ATS-friendly according to the given job description.
+2.Incorporate Relevant Keywords: Identify and integrate keywords from the provided job description into the resume's profile summary, experience descriptions, project descriptions, and skills section to improve matching.
+3.Use percentages (%) to quantify experience and project impact based on the specific job description. For example: improving search efficiency by 40%, increasing communication efficiency by 30%, enhancing system robustness by a measurable percentage, etc.
+4.Optimize Content: Revise the profile summary, experience descriptions, project descriptions, and skills sections to be concise, impactful, and ATS-compliant according to job description.
+5.Address Formatting Issues: Identify and suggest corrections for any structural or formatting issues that may hinder ATS parsing.
+
+The desired outcome is a fully optimized resume that significantly increases the candidate's chances of securing an interview for the specified job. Wait for the job description and sample resume before providing feedback."
+Update the following sample resume in latex to make it compatible with given job description and make sure pickup project from the sample resume only and update experience,profile summary , skills and Project description according to the job description and requirement, no need to add any new project from your side.
+
+The goal is to preserve the exact layout, formatting, spacing,line height,gap,bullet point conistency and overall word count of the give origianl format LaTeX resume(number of words should not exceed from format resume else our resume will become of 2 page which i don't want) while only improving the text content to match relevant keywords from a provided job description.
+
+
+
+
+////////////////////////////////////////////////////
+
+
+%-------------------------
+% Resume in Latex (ATS-COMPATIBLE & SINGLE-PAGE, FINAL VERSION)
+% Author : Harshibar
+% Reviewed & Rewritten by : World-Class Resume Reviewer
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+\usepackage{fontawesome5}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+
+% Font packages
+\usepackage[scale=0.90,lf]{FiraMono}
+\usepackage{tgheros}
+\renewcommand*\familydefault{\sfdefault}
+\usepackage[T1]{fontenc}
+
+% Color definitions
+\definecolor{light-grey}{gray}{0.83}
+\definecolor{dark-grey}{gray}{0.3}
+\definecolor{text-grey}{gray}{.08}
+
+% Page style setup
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Optimized margins and text height
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{0in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.85in}
+\addtolength{\textheight}{1.3in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Reduced vertical space around section titles
+\titleformat {\section}{
+    \bfseries \vspace{1pt} \raggedright \large
+}{}{0em}{}[\color{light-grey} {\titlerule[2pt]} \vspace{-6pt}]
+
+%-------------------------
+% Custom commands (Simplified back to original subheading command)
+
+\newcommand{\resumeItem}[1]{
+  \item\small{{#1}}
+}
+
+% Standard command for all subheadings (Title on Left, Date on Right)
+\newcommand{\resumeSubheading}[4]{
+  \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \small\color{dark-grey} #2 \\
+      \textit{\small#3} & \textit{\small\color{dark-grey} #4} \\
+    \end{tabular*}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \textbf{#1} \\ \textit{\small #2}
+}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}, topsep=0pt, partopsep=0pt, itemsep=6pt, parsep=0pt]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in, topsep=2pt, partopsep=0pt, itemsep=0pt, parsep=2pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+
+\color{text-grey}
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge Md Nazim} \\ \vspace{4pt}
+    \small \texttt{+91-9576631468} \hspace{1pt} $|$
+    \hspace{1pt} \href{mailto:nazim45200@gmail.com}{\texttt{nazim45200@gmail.com}} \hspace{1pt} $|$
+    \hspace{1pt} \href{https://www.linkedin.com/in/nazim452/}{\texttt{LinkedIn}} \hspace{1pt} $|$
+    \hspace{1pt} \href{https://mdnazim.in}{\texttt{Portfolio}}
+    \vspace{-4pt}
+\end{center}
+
+
+\section{PROFILE SUMMARY}
+\resumeItem{
+\textbf{Full Stack Developer (MERN)} with proven experience in designing, developing, and deploying scalable web applications, with a strong focus on \textbf{performance optimization, reliability, and system robustness}.  Proficient in \textbf{Data Structures and Algorithms}, achieving up to \textbf{30\% improvement in application efficiency}. Experienced in \textbf{DevOps and CI/CD pipelines} using Docker, GitHub Actions, and Jenkins, reducing deployment failures by \textbf{40\%}. Hands-on expertise in \textbf{Generative AI systems}, leveraging RAG, LangChain, and Vector Databases to deliver AI-driven solutions with improved response accuracy and reduced latency.
+}
+ \vspace{-11pt}
+%-----------EXPERIENCE-----------
+\section{EXPERIENCE}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Full Stack Developer Intern | Scholar Pro Connect LLP}{April 2024 -- July 2024}
+      {}{} \vspace{-17pt}
+     \resumeItemListStart
+\resumeItem{Developed and optimized a \textbf{blog management system} using React.js and Redux Toolkit, improving page load performance by \textbf{28\%} and reducing state-related bugs by \textbf{35\%}.}
+\resumeItem{Enhanced Git/GitHub workflows and branching strategies, reducing merge conflicts by \textbf{40\%} and accelerating release cycles by \textbf{25\%}.}
+\resumeItem{Applied Agile methodologies using Jira for sprint planning and issue tracking, contributing to a \textbf{20\% increase in sprint delivery accuracy}.}
+      \vspace{-16pt}
+  \resumeSubHeadingListEnd
+
+
+
+
+
+%-----------PROJECTS-----------
+\section{PROJECTS}
+\resumeSubHeadingListStart
+  \resumeProjectHeading
+    {Academic Bridge --- Academic \& Administrative Management System for our college}
+    {\href{https://academicbridge.mdnazim.in}{Live Demo} $|$ \href{https://github.com/Nazim452/SEC-EduTrack-Server.git}{GitHub Repository}}
+    
+  \begin{itemize}[leftmargin=0.15in, label=\textbf{--}, topsep=2pt, partopsep=0pt, itemsep=0pt, parsep=2pt]
+  \resumeItem{Developed a \textbf{college management platform} enabling staff, parents, and administrators to manage \textbf{leave approvals}, \textbf{result processing}, and secure academic communication, replacing postal systems with \textbf{digital workflows}.}
+  \resumeItem{Added a \textbf{chat feature} within the application, incorporating \textbf{real-time multilingual translation}, \textbf{chat summarization}, and \textbf{recent message summarization}, improving communication efficiency by \textbf{30\%}.}
+  \resumeItem{Developed an \textbf{AI-powered chatbot} for intelligent query handling, improving query response accuracy by \textbf{25\%}.\textbf{ Dockerized} microservices using Docker Compose, increasing deployment reliability by \textbf{40\%} and system uptime to \textbf{99.2\%}.}
+  \resumeItem{\textbf{Tech Stack}: Node.js, Express.js, MongoDB, JavaScript, React.js, Tailwind CSS, RAG, LangChain, Pinecone.}
+  \end{itemize}
+
+  \resumeProjectHeading
+    {AI-Powered Log Classifier --- Monitoring Tool}
+{\href{https://github.com/Nazim452/LogClassifier-Pro.git}{GitHub Repository} $|$ \href{https://hub.docker.com/repository/docker/nazim452/log-classification-app/general}{Docker Hub Repository}}
+
+  \begin{itemize}[leftmargin=0.15in, label=\textbf{--}, topsep=2pt, partopsep=0pt, itemsep=0pt, parsep=2pt]
+  \resumeItem{Developed an AI-powered log classification and incident routing system using a hybrid pipeline (Regex, BERT, and Groq LLM) to automate log analysis and team assignment, reducing incident resolution time by \textbf{40\%}.}
+  \resumeItem{Built an interactive monitoring dashboard for log visualization, filtering, downloadable reports, and automated \textbf{email alerts}, improving operational visibility and incident response efficiency.}
+  \resumeItem{\textbf{Tech Stack}: Python, Pandas, Regex, BERT, Groq LLM, Streamlit, SMTP, Docker Compose.}
+  \end{itemize}
+
+  \vspace{-17pt}
+\resumeSubHeadingListEnd
+
+
+
+
+
+
+
+%-----------SKILLS-----------
+\section{SKILLS}
+\begin{itemize}[leftmargin=0.15in, itemsep=1pt, parsep=1pt, topsep=2pt, partopsep=0pt]
+    \resumeItem{\textbf{Front-End:} JavaScript, React.js, Redux Toolkit, CSS, HTML, Tailwind CSS, Bootstrap, Material UI, Chakra UI.}
+    \resumeItem{\textbf{Back-End:} Node.js, Express.js}
+    \resumeItem{\textbf{Databases:} MongoDB, SQL, Vector Databases}
+    \resumeItem{\textbf{DevOps:} Docker, Git, GitHub, Jira}
+    \resumeItem{\textbf{Generative AI:} RAG (Retrieval-Augmented Generation), LangChain, Embeddings.}
+    \resumeItem{\textbf{Computer Fundamentals:} Data Structures and Algorithms (DSA), Object-Oriented Programming (OOP), Operating Systems, Computer Networks, Database Management Systems (DBMS), System Design.}
+\end{itemize}
+\vspace{-15pt}
+
+%-----------EDUCATION-----------
+\section{EDUCATION}
+  \resumeSubHeadingListStart
+    % --- CHANGE: Reverted to using the standard \resumeSubheading command ---
+    \resumeSubheading
+      {B.E. in Computer Science and Engineering, CGPA: 9.45}{2022 -- 2026}
+      {Sengunthar Engineering College}{Namakkal}
+
+          \resumeSubheading
+      {Higher Secondary, Marks: 86\%}{2021 -- 2022}
+      {Ramdyalu Singh College}{Muzaffarpur}
+
+        \resumeSubheading
+      {Matriculation, Marks: 90.4\%}{2019 -- 2020}
+      {Hira Kamla High School}{Muzaffarpur}
+ 
+
+    
+  \resumeSubHeadingListEnd
+
+\end{document}
+
+
+
+/////////////////////////////////////////////////////////
+
+
+
+Also add following keyword to make more ATS friendly in this resume  - 
+//////////////////////////////////////
+
+
+📧 Email: nazim45200@gmail.com
+
+📱 Mobile: +91-9576631468
+
+🔗 LinkedIn: https://www.linkedin.com/in/nazim452/
+
+💻 GitHub: https://github.com/Nazim452
+
+🌐 Portfolio: https://mdnazim.in
+
+🧠 LeetCode:
+https://leetcode.com/u/mr_nazim_452
+
+
+
+
+
+
+
+
+
+
+
+
+///////////////////
+
+python -m streamlit run main.py

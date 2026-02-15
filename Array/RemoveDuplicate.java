@@ -11,23 +11,15 @@ public class RemoveDuplicate {
     static void removeSDuplicate(int[] arr) {
         int j = 0;
 
-        // for (int i = 0; i < arr.length; i++) {
-        //     if (arr[j] != arr[i]) {
-        //         j++;
-        //         arr[j] = arr[i];
-
-        //     }
-        // }
-
-
-        int j1 = 0;
-        for(int i = 0;i<arr.length; j++){
-            if(j1!=arr[i]){
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[j] != arr[i]) {
                 j++;
-                arr[j1] = arr[i];
-            }
+                arr[j] = arr[i];
 
+            }
         }
+
+
         for (int i = 0; i < j + 1; i++) {
             System.out.print(arr[i] + " ");
         }

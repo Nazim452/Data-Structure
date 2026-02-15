@@ -2,12 +2,58 @@ package HashMap;
 
 import java.util.HashMap;
 // import java.util.HashSet;
+import java.util.LinkedHashMap;
+
+import Stack.ArrayInplem.stak;
 
 public class ValidAnagram {
 
 
+    // Brute Force - Time Complexity - O(n^2)
+
+        static boolean ValidAnagramMyyy(String s , String t){
+        int n1 = s.length();
+        int n2 = t.length();
+
+        if(n1!=n2) return false;
+
+        for(int i = 0; i<n1; i++){
+
+            boolean found = false;
+
+            char ch = s.charAt(i);
+
+            for(int j = 0; j<n2; j++){
+                if(ch==t.charAt(j)){
+                    found = true;
+                    break;
+                }
+            }
+
+            if(!found) return false;
+
+        }
+        return true;
+
+    }
+
+
+
    
     static HashMap<Character, Integer> make_freq_string(String s){
+
+        // 2nd Method - 
+
+        //  HashMap<Character , Integer> map = new LinkedHashMap<>();
+
+        // for(int i = 0 ;i<s.length(); i ++){
+
+        //     char ch = s.charAt(i);
+
+        //     map.put(ch ,map.getOrDefault(ch,0 )+1);
+        // }
+
+
         HashMap<Character, Integer> mp = new HashMap<>();
 
         for(int i =0; i<s.length(); i++){
@@ -58,6 +104,9 @@ public class ValidAnagram {
         return true;
       
     } 
+
+
+
 
     public static void main(String[] args) {
         String s1 = "silent";

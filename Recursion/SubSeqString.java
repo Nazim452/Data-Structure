@@ -4,6 +4,28 @@ import java.util.ArrayList;
 
 public class SubSeqString {
 
+    // Best Methhod to Print SubSequqnce
+
+    static void printSubSeq(String s) {
+        helper(s, 0, "");
+    }
+
+    static void helper(String s, int index, String curr) {
+
+        // Base case: reached end of string
+        if (index == s.length()) {
+            System.out.println(curr);
+            return;
+        }
+
+        // 1️⃣ Include current character
+        helper(s, index + 1, curr + s.charAt(index));
+
+        // 2️⃣ Exclude current character
+        helper(s, index + 1, curr);
+    }
+
+
     // print sub set sequence of string -- best way
 
     static void string_Sub_Sequqence2(String s, String cuurrentAns) {

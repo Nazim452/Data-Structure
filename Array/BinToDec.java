@@ -26,9 +26,10 @@ public class BinToDec {
         }
         System.out.println(bin);
     }
-   public static void main(String[] args) {
-    // binTOdec(1001);
-    dectoBin(10);
-    
-   } 
+
+    public static void main(String[] args) {
+        // binTOdec(1001);
+        dectoBin(4);
+
+    }
 }

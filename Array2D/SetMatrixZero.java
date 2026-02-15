@@ -10,6 +10,37 @@ public class SetMatrixZero {
             System.out.println();
         }
     }
+    //  **** BEST AND EASY SETZERO MATRIX METHOD ****//
+
+    static void SetMatrixZeroEaasiest(int[][] matrix){
+    if (matrix == null || matrix.length == 0) return;
+
+
+    int row = matrix.length;
+    int col = matrix[0].length;
+
+    boolean[] zeroRow = new boolean[row];
+    boolean[] zeroCol = new boolean[col];
+
+    for(int i = 0; i<row; i++){
+      for(int j = 0; j<col; j++){
+
+        if(matrix[i][j]==0){
+          zeroRow[i] = true;
+          zeroCol[j] = true;
+        }
+      }
+    }
+    for(int i = 0; i<row; i++){
+      for(int j = 0; j<col; j++){
+         if (zeroRow[i] || zeroCol[j]) {
+                matrix[i][j] = 0;
+            }
+      }
+    }
+
+  }
+
 
     static void question (int[][] matrix){
          boolean firstRowZero = false;
@@ -77,20 +108,20 @@ public class SetMatrixZero {
     
     
     public static void main(String[] args) {
-        int[][] matrix5 = {{0, 1, 1}, {1, 0, 1}, {1, 1, 1}};
-        System.out.println("Test Case 5:");
-        printMatrix(matrix5);
-        question(matrix5);
+            // int[][] matrix5 = {{0, 1, 1}, {1, 0, 1}, {1, 1, 1}};
+            // System.out.println("Test Case 5:");
+            // printMatrix(matrix5);
+            // question(matrix5);
+            // System.out.println();
+            // printMatrix(matrix5);
+
+
+          int[][] matrix6 = {{1, 2, 3}, {4, 0, 6}};
+        System.out.println("Test Case 6:");
+        printMatrix(matrix6); 
+        question(matrix6);
         System.out.println();
-        printMatrix(matrix5);
-
-
-        //   int[][] matrix6 = {{1, 2, 3}, {4, 0, 6}};
-        // System.out.println("Test Case 6:");
-        // printMatrix(matrix6);
-        // question(matrix6);
-        // System.out.println();
-        // printMatrix(matrix6);
+        printMatrix(matrix6);
 
         //   int[][] matrix3 = {{1, 2}, {3, 4}};
         // System.out.println("Test Case 3:");

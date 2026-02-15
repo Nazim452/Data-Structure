@@ -8,7 +8,7 @@ public class FirstNonRepeating {
         for (int i = 0; i < n; i++) {
             boolean isRepeating = false;
 
-            for (int j = 0; j < n; j++) {
+            for (int j = i; j < n; j++) {
                 if (i != j && arr[i] == arr[j]) {
                     isRepeating = true;
                     break;

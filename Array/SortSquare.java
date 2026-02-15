@@ -73,15 +73,35 @@ public class SortSquare {
 
         printArray(ans);
     }
+    static void questionNow(int[]arr){
+        int n = arr.length;
+        int l = 0 , r = n-1, k = n-1;
+        // int[] ans = new int[n];
+
+        while (l<r) {
+            if(Math.abs(arr[l])<Math.abs(arr[r])) {
+                arr[k] = arr[r]*arr[r];
+                r--;
+            }
+            else {
+                arr[k] = arr[l]*arr[l];
+                l++;
+            }
+            k--;
+            
+        }
+        printArray(arr);
+    }
 
     public static void main(String[] args) {
         // int[] arr = { -10, -5, -2, 1, 4, 9 };
         int[] arr = { -4, -1, 0, 3, 10 };
 
-        int[] ans = sortSquare(arr);
-        // printArray(ans);
+        // int[] ans = sortSquare(arr);
+        // // printArray(ans);
 
-        question(arr);
+        // question(arr);
+        questionNow(arr);
 
     }
 

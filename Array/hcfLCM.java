@@ -43,7 +43,7 @@ public class hcfLCM {
     public static void main(String[] args) {
 
         // System.out.println(gcd(14, 8));
-        System.out.println(lcm(14, 8));
+        System.out.println(lcm(10,20));
 
         Long num1 = 10L;
         Long num2 = -10L;
