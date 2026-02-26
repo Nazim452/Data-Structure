@@ -10,6 +10,7 @@ The desired outcome is a fully optimized resume that significantly increases the
 Update the following sample resume in latex to make it compatible with given job description and make sure pickup project from the sample resume only and update experience,profile summary , skills and Project description according to the job description and requirement, no need to add any new project from your side.
 
 The goal is to preserve the exact layout, formatting, spacing,line height,gap,bullet point conistency and overall word count of the give origianl format LaTeX resume(number of words should not exceed from format resume else our resume will become of 2 page which i don't want) while only improving the text content to match relevant keywords from a provided job description.
+give whole latex code in a single file.
 
 
 

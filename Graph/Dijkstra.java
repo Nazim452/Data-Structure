@@ -68,7 +68,7 @@ public class Dijkstra {
         boolean[] isVisited = new boolean[V];
         pq.add(new pair(0, 0));
 
-        while (!pq.isEmpty()) {
+        while (!pq.isEmpty()) { 
             pair curr = pq.remove();
 
             if (!isVisited[curr.node]) {
