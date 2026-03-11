@@ -24,11 +24,14 @@ public class targetSumSubset {
             for(int j = 1; j<sum+1; j++){
                 int  v = arr[i-1];
                 // include
-                //  - v<=j --- checking validt or not
-                if(v<=j && dp[i-1][j-v]) dp[i][j] = true;
+               
 
-                // Invalid - exclude
-                else if(dp[i-1][j]==true) dp[i][j] = true;
+
+                if(v<=j){
+                    dp[i][j] = dp[i-1][j-v]|| dp[i-1][j];
+                }
+                else dp[i][j] = dp[i-1][j];
+               
             }
         }
 
@@ -38,7 +41,7 @@ public class targetSumSubset {
     }
     public static void main(String[] args) {
         int []arr = {4,2,7,1,3};
-        int targetSum=10;
+        int targetSum=12;
 
         System.out.println(sumSubset(arr, targetSum));
         

@@ -28,6 +28,8 @@ public class Partition {
 
     }
 
+    
+
     public static void main(String[] args) {
         int[] arr = {15,5,6,4,8,2};
         System.out.println("Equal partition of array possible -  " + PartitionSumArr(arr));

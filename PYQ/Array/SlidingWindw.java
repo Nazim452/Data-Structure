@@ -22,6 +22,28 @@ public class SlidingWindw {
 
         return ans;
     }
+ static void printArray(int[] arr) {
+        for (int i = 0; i < arr.length; i++) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+    static void question(int[] arr , int k){
+        int n = arr.length;
+
+        int[] minWIndow = new int[n-k+1];
+        int ans = 0 , m = 0;
+        for(int i = 0; i<n-k+1; i++){
+            ans =0;
+           
+            for(int j = i; j<i+k; j++){
+                ans = Math.max(ans, arr[j]);
+            }
+            minWIndow[m++] = ans;
+
+        }
+        printArray(minWIndow);
+    
+    }
 
        public static void main(String[] args) {
         int[] a = { 2, 4, 7, 1, 6, 3 };
@@ -33,10 +55,12 @@ public class SlidingWindw {
 
         // Output - [7,7,7,6]
 
-        int[] ans = slidingWindow(a, k);
-        for (int i = 0; i < ans.length; i++) {
-            System.out.print(ans[i] + " ");
-        }
+        // int[] ans = slidingWindow(a, k);
+        // for (int i = 0; i < ans.length; i++) {
+        //     System.out.print(ans[i] + " ");
+        // }
+
+        question(a, k);
     }
 
 }

@@ -25,7 +25,6 @@ public class Q1RealQuestionIgotinNQT {
         }
         return 1;
     }
-
     public static void main(String[] args) {
         int[] arr1 = {3, 9, 4,      5, 3, 2,     7, 9, 3,     3, 2}; 
         int n1 = 3;

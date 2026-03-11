@@ -163,7 +163,7 @@ public class FindSubArrWithTargetSum {
         // int[] arr = { 10,2,4,7 };
         // int targetSum = 13;
 
-        practice(arr, targetSum);
+        findSubArray(arr, targetSum);
 
         // if targetSum =7  then OUTPUT - [3,4] , [3,4,-7,1,3,3] , [1,3,3] , [3,3,1];
 

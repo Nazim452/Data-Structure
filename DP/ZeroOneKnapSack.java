@@ -96,10 +96,10 @@ public class ZeroOneKnapSack {
     }
 
     public static void main(String[] args) {
-        int[] val = { 15, 14, 10, 45, 30 };
-        int wt[] = { 2, 5, 1, 3, 4 };
-        int cap = 7;
-        // System.out.println( knapSackRecur(val, wt, cap, val.length));;
+        int[] val = {10, 20, 20, 50, 150  };
+        int wt[] = { 10, 10, 40, 50, 90 };
+        int cap = 105;
+        // System.out.println( knapSackRecur(val, wt, cap, )val.length);;
     
         // Memoization___________
 
