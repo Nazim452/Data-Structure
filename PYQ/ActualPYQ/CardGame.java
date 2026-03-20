@@ -30,7 +30,6 @@ package PYQ.ActualPYQ;
 // 12 
 // Video Solution: Watch Her
 
-import java.util.Scanner;
 
 public class CardGame {
   
