@@ -1,0 +1,30 @@
+1. use always - 
+
+public ***static class{
+
+}
+    
+
+2. Check null pointer
+
+if(c[i]!=null   && c[i].getName)
+
+4.
+Sometimes data required :- double,,, not int
+
+
+5.
+
+
+3. To print data:
+  @Override
+        public String toString() {
+            return "Customer [customerId=" + customerId + ", customerName=" + customerName +
+                    ", customerAddress=" + customerAddress +
+                    ", contactNumber=" + contactNumber +
+                    ", accountNumber=" + accountNumer +
+                    ", accountType=" + accountType + "]";
+        }
+
+4. Aisa koi jaruri nahi hai ki jitna member hai class ka utna ka input lena hi hai
+read q uestion carefully and some member may be decide later

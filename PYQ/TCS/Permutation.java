@@ -30,4 +30,8 @@ public class Permutation {
     public static void main(String[] args) {
 
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 7d1ba78 (ALL file done)

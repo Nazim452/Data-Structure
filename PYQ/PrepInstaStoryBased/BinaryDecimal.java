@@ -94,8 +94,8 @@ public class BinaryDecimal {
     }
     public static void main(String[] args) {
 
-        // Question(10);
-        approachSecod(10);
+        Question(10);
+        // approachSeco d(10);
 
     }
 

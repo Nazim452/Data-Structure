@@ -24,4 +24,8 @@ public class DecomposableIntoValueEqualString {
         question("00011111222");
         
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 7d1ba78 (ALL file done)

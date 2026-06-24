@@ -75,6 +75,8 @@ public class FindSubArrWithTargetSum {
         }
     }
 
+
+    // Only work for +ve element
     static void subArraySumLoop(int[] arr, int k) {
         int st = 0, end = 1, sum = arr[0], len = arr.length;
 
@@ -156,14 +158,16 @@ public class FindSubArrWithTargetSum {
         }
     }
 
-    public static void main(String[] args) {
 
-        int[] arr = { 3, 4, -7, 1, 3, 3, 1, -4 };
-        int targetSum = 7;
+        public static void main(String[] args) {
+
+        // int[] arr = { 3, 4, -7, 1, 3, 3, 1, -4 };
+        // int targetSum = 7;
+    
         // int[] arr = { 10,2,4,7 };
         // int targetSum = 13;
 
-        findSubArray(arr, targetSum);
+        // findSubArray(arr, targetSum);
 
         // if targetSum =7  then OUTPUT - [3,4] , [3,4,-7,1,3,3] , [1,3,3] , [3,3,1];
 

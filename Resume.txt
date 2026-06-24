@@ -5,7 +5,7 @@ You are an expert resume optimization consultant specializing in Applicant Track
 3.Use percentages (%) to quantify experience and project impact based on the specific job description. For example: improving search efficiency by 40%, increasing communication efficiency by 30%, enhancing system robustness by a measurable percentage, etc.
 4.Optimize Content: Revise the profile summary, experience descriptions, project descriptions, and skills sections to be concise, impactful, and ATS-compliant according to job description.
 5.Address Formatting Issues: Identify and suggest corrections for any structural or formatting issues that may hinder ATS parsing.
-
+6.Change the internship role and description position based on job description.
 The desired outcome is a fully optimized resume that significantly increases the candidate's chances of securing an interview for the specified job. Wait for the job description and sample resume before providing feedback."
 Update the following sample resume in latex to make it compatible with given job description and make sure pickup project from the sample resume only and update experience,profile summary , skills and Project description according to the job description and requirement, no need to add any new project from your side.
 
@@ -212,6 +212,8 @@ give whole latex code in a single file.
 
 
 Also add following keyword to make more ATS friendly in this resume  - 
+
+
 //////////////////////////////////////
 
 

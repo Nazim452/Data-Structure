@@ -27,6 +27,8 @@ public class SumCube {
         System.out.println("Cube" + cube);
     }                                                                      
 
+
+    
     public static void main(String[] args) {
 
         calcSUmCUbe(4, 9);

@@ -1,0 +1,80 @@
+This  is the revision code of DSA
+
+
+Job description
+🎯 Atlys' mission is to enable every person on earth to travel freely.
+
+At Atlys, we believe that the path to creating a more open world is by making it efficient to travel. Travelers cite visas as the most frustrating pain point, and we're starting by automating that completely. We're looking for talented people who are interested in building the future of travel alongside us.
+
+Building technology to increase global movement liquidity will be one of the most exciting developments in decades. If you are curious why the smartest people want to work at Atlys, read this post.
+
+We're looking for an ML intern to work on image quality detection and structured data extraction models. Here, you'll be building models from scratch, running real experiments and improving them through better data and smarter training techniques. You'll ship work that directly impacts production.
+
+Job requirements
+The Job:
+
+•⁠ ⁠Train and finetune models for image quality detection and enhancement tasks
+
+•⁠ ⁠Run structured experiments - compare different architectures, track what works and document why
+
+•⁠ ⁠Prepare and validate labeled datasets for structured field extraction (names, dates, numbers and more)
+
+•⁠ ⁠Write scripts to automate repetitive data processing tasks so you're not doing the same thing twice
+
+•⁠ ⁠Document your training procedures and results clearly
+
+The Ideal Candidate:
+
+•⁠ ⁠Good Python skills - you can write clean, working scripts without hand-holding
+
+•⁠ ⁠Familiarity with PyTorch and/or TensorFlow - you've trained models before, whether for coursework, competitions, or personal projects
+
+•⁠ ⁠Understanding of computer vision fundamentals - image processing, augmentation and common architectures (YOLO, U-Net, ResNet, etc.)
+
+•⁠ ⁠Attention to detail - data work can be tedious and mistakes propagate fast, you need to care about getting it right
+
+•⁠ ⁠Familiarity with Hugging Face Transformers and model hubs
+
+•⁠ ⁠Curiosity about the LLM/VLM space and willingness to learn finetuning techniques (LoRA, QLoRA, etc.)
+
+
+
+
+
+
+
+hat You'll Do: - Prototype and iterate on AI-powered features using LLMs, NLP pipelines, and 
+computer vision models — fast. - Integrate pre-trained and fine-tuned models from Hugging Face into production-ready 
+applications. - Build and maintain Agentic AI / RAG (Retrieval-Augmented Generation) pipelines using 
+vector databases like Pinecone, Weaviate, or Chroma. - Collaborate with product and design team to translate vague ideas into concrete, 
+working features. - Write clean, modular Python code that others can build on and maintain. - Evaluate model outputs, run experiments, and document findings clearly. - Contribute ideas actively — no idea is too raw or too ambitious to put on the table. 
+ 
+ 
+BPR Plaza,3rd Floor, # 315, 7th Main Rd, 2nd Block, HRBR Layout, Kalyan Nagar, Bengaluru, Karnataka 560043. 
+Core Skills Required: - Logical Problem Solving— Ability to break down complex problems, reason step-by
+step, and design clean solutions under ambiguity. - Communication — Clear written and verbal communication. You can explain model 
+behaviour to a non-technical stakeholder. - Rapid Prototyping — Turn ideas into working demos quickly. You default to building 
+over planning when stakes are low. - Intellectual Curiosity — You follow new research, try new tools, and form opinions on 
+what works — then share them. 
+Technical Requirements: 
+Generative AI & LLMs- 
+Prompt Engineering, LLM APIs (OpenAI / Anthropic / Gemini), RAG Pipelines, Vector 
+Databases (Pinecone / Weaviate / Chroma), LangChain / LlamaIndex, Fine-tuning 
+basics 
+NLP & Hugging Face- 
+Transformers library, Tokenizers & Embeddings, Text Classification / NER / 
+Summarization, Sentence Transformers, Model Hub — loading & inference 
+Computer Vision- 
+Image Classification, Object Detection, OpenCV / PIL, Vision Models (CLIP, YOLO, ViT) 
+Programming & Tools- 
+Python (primary), PyTorch / TensorFlow basics, REST APIs / FastAPI, Git & version 
+control, Jupyter / Google Colab 
+ 
+Good to Have (Plus) - Experience building AI agents— autonomous or semi-autonomous systems using 
+frameworks like LangGraph, CrewAI, AutoGen, or custom tool-calling pipelines that can 
+plan, reason, and act across multiple steps. - Experience building backend APIs using frameworks like FastAPI, Flask, or Django — 
+integrating AI models into scalable, production-ready services. 
+ 
+ 
+BPR Plaza,3rd Floor, # 315, 7th Main Rd, 2nd Block, HRBR Layout, Kalyan Nagar, Bengaluru, Karnataka 560043. - Hands-on experience deploying applications on AWS, Azure, or GCP (EC2, Lambda, 
+Azure ML, Vertex AI, etc.). - Familiarity with containerisation tools — Docker, Kubernetes basics. - Experience with CI/CD pipelines for ML model deployment. - Prior internship, freelance project, or open-source contributions in AI/ML. - Portfolio of personal projects that demonstrate initiative and creativity. - You ship. "Imperfect and working" beats "perfect and in-progress" - You ask smart questions and actively seek feedback. - You read papers, follow releases, and have opinions on the tools you use. - You treat edge cases and failures as puzzles, not frustrations. - You make the people around you smarter by sharing what you learn. 

@@ -54,4 +54,8 @@ public class NextPermutation {
 
     }
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 7d1ba78 (ALL file done)

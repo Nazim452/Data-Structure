@@ -42,24 +42,45 @@ package PYQ.TCS;
 // Final Output:
 
 // 5 * 2 = 10
-  
+
 public class PrimeLogic {
 
     // Efficient Prime Check
+
+    // let numb = 6, factor - 1,2,3 , half o fthe number , we have to check wih only
+    // facotr
+
+    // Why i += 2 Instead of i++
+
+    // You asked a very good question.
+
+    // Important Observation
+
+    // After checking:
+
+    // num % 2 == 0
+
+    // we already know the number is not divisible by 2.
+
+    // So all even numbers can be skipped.
     static boolean isPrime(int num) {
-        if (num <= 1) return false;
-        if (num == 2) return true;
-        if (num % 2 == 0) return false;
+        if (num <= 1)
+            return false;
+        if (num == 2)
+            return true;
+        if (num % 2 == 0)
+            return false;
 
         for (int i = 3; i * i <= num; i += 2) {
-            if (num % i == 0) return false;
+            if (num % i == 0)
+                return false;
         }
         return true;
     }
 
     // Find nth prime number
     static int findNthPrime(int n) {
-         int count = 0;
+        int count = 0;
         int num = 2; // starting point of prime number -
 
         while (true) {
@@ -97,8 +118,12 @@ public class PrimeLogic {
         System.out.println(m * m1);
     }
 
+
+   
     public static void main(String[] args) {
-        int m = 5, n = 6;
-        solve(m, n);
+        // int m = 5, n = 6;
+        // solve(m, n);
+
+        
     }
 }
